@@ -1,24 +1,16 @@
-import GoogleMapReact from 'google-map-react'
+import { MapContainer, TileLayer } from 'react-leaflet'
 
-const Map = ({center, zoom}) => {
+const Map = () => {
+  const center = [24.63, 90.45]
+  const zoom = 6
   return (
-    <div className='map'>
-      <GoogleMapReact
-      bootstrapURLKeys={{key:'AIzaSyCw81ValoDAmj_vrFoPj4fkpjox2KUIOVM'}}
-      defaultCenter={center}
-      defaultZoom={zoom}
-      >
-      </GoogleMapReact>
-    </div>
+    <MapContainer className="map" center={center} zoom={zoom}>
+      <TileLayer
+        attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+      />
+    </MapContainer>
   )
-}
-
-Map.defaultProps = {
-  center: {
-    lat: 42.3265,
-    lng: -122.8756
-  },
-  zoom: 6
 }
 
 export default Map

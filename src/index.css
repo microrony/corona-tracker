@@ -10,7 +10,7 @@ body {
   font-size: 1.2rem;
 }
 
-map {
+.map {
   height: 100vh;
   width: 100vw;
   position: relative;
