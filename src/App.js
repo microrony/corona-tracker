@@ -6,29 +6,17 @@ const App = () => {
   const [eventData, setEventData] = useState([])
   const [loading, setLoading] = useState(false)
 
-  // useEffect(() => {
-  //   const fetchEvents = async () => {
-  //     setLoading(true)
-  //     const res = await fetch('https://eonet.sci.gsfc.nasa.gov/api/v2.1/events')
-  //     const { events } = await res.json()
-
-  //     setEventData(events)
-  //     setLoading(false)
-  //   }
-
-  //   fetchEvents()
-  // }, [])
-
   useEffect(() => {
-    const fetchEvents = async () => {
-    setLoading(true)
-    const res = await axios('https://eonet.sci.gsfc.nasa.gov/api/v2.1/events')
-    const { events } = await res.data
-    setEventData(events)
-    setLoading(false)
-    }
 
-    fetchEvents()
+    setLoading(true)
+    axios('https://eonet.sci.gsfc.nasa.gov/api/v2.1/events')
+    .then(res => {
+      const { events } = res.data;
+      setEventData(events)
+      setLoading(false)
+    })
+    .catch('cannot find any data')
+    
   }, [])
 
   return (
