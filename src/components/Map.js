@@ -3,23 +3,20 @@ import { MapContainer, TileLayer, CircleMarker, Popup } from 'react-leaflet'
 const Map = ({ eventData }) => {
   const redOptions = { color: 'red' }
   const markers = eventData.map((ev, index) => {
-    if (ev.categories[0].id === 8) {
       return (
         <CircleMarker
           key={index}
-          center={[ev.geometries[0].coordinates[1], ev.geometries[0].coordinates[0]]}
+          center={[ev.countryInfo.lat, ev.countryInfo.long]}
           pathOptions={redOptions}
           radius={20}
         >
           <Popup>Popup in CircleMarker</Popup>
         </CircleMarker>
       )
-    }
-    return null
   })
 
   const position = [43.32, -122.87]
-  const zoom = 6
+  const zoom = 2
 
   return (
     <MapContainer className="map" center={position} zoom={zoom}>

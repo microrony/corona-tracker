@@ -9,9 +9,9 @@ const App = () => {
   useEffect(() => {
 
     setLoading(true)
-    axios('https://eonet.sci.gsfc.nasa.gov/api/v2.1/events')
+    axios('https://corona.lmao.ninja/v2/countries')
     .then(res => {
-      const { events } = res.data;
+      const events = res.data;
       setEventData(events)
       setLoading(false)
     })
