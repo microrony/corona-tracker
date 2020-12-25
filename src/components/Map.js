@@ -13,7 +13,7 @@ const Map = ({ eventData }) => {
         <Popup className='popup'>
           <ul>
             <h3>{ev.country}</h3>
-            <li>{`Total cases: ${ev.cases}`}</li>
+            <li>{`Total Cases: ${ev.cases}`}</li>
             <li>{`Deaths: ${ev.deaths}`}</li>
             <li>{`Recovered: ${ev.recovered}`}</li>
             <li>{`Critical: ${ev.critical}`}</li>
