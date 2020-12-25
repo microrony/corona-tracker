@@ -21,7 +21,7 @@ const App = () => {
 
   return (
     <div>
-      { !loading ? <Map eventData={eventData} /> : <h1>Loading</h1> }
+      { !loading ? <Map eventData={eventData} /> : <h1 className='loading'>Loading...</h1> }
     </div>
   )
 }
