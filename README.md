@@ -4,9 +4,9 @@ This React map has all the information about the current pandemic. You can see h
 
 ## Live Site
 
-![Screenshot of Live Site](./images/screenshot.png)
+![Screenshot of Live Site](./images/screenshot.jpg)
 
-[Click here](https://corona-tracker-microrony.netlify.app/)
+[Click here to see the live site](https://corona-tracker-microrony.netlify.app/)
 ## Built With
 
 * [React](https://reactjs.org/) - The JavaScript framework used
